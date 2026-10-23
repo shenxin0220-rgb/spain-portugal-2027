@@ -1,11 +1,716 @@
-const trip={title:'2027 春节西葡旅行',days:[
-{date:'02/07',weekday:'周日',city:'里斯本',title:'抵达里斯本｜Chegada a Lisboa',summary:'北京出发，经伊斯坦布尔转机，夜间抵达葡萄牙。',tag:'抵达 · 休息',stops:[{name:'北京首都国际机场',local:'Beijing Capital International Airport',time:'出发',query:'Beijing Capital International Airport'},{name:'伊斯坦布尔机场',local:'İstanbul Havalimanı',time:'转机',query:'Istanbul Airport'},{name:'里斯本机场',local:'Aeroporto Humberto Delgado',time:'23:25（PDF 航班记录）',query:'Lisbon Airport'},{name:'里斯本酒店',local:'Lisboa · Baixa / Pombal / Chiado',time:'入住'}],note:'抵达时间较晚，优先安全到店，不安排景点。机场至酒店的交通方式和酒店地址待最终确认。',transport:'PDF 记录 TK197：伊斯坦布尔 14:20 → 里斯本 23:25。国际段完整时刻请以出票信息为准。',stay:'里斯本连住；PDF 提供 Baixa / Pombal / Chiado 一带作为住宿区域。',status:'PDF 中国际机票标为已订；具体酒店尚未在此版确认。'},
-{date:'02/08',weekday:'周一',city:'波尔图',title:'里斯本往返波尔图｜Lisboa ⇄ Porto',summary:'当日往返：老城建筑、杜罗河岸与城市全景。采用最新七景点版本。',tag:'铁路 · 步行',stops:[{name:'里斯本东方站',local:'Lisboa Oriente',time:'早间出发',query:'Lisboa Oriente'},{name:'波尔图坎帕尼扬站',local:'Porto Campanhã',query:'Porto Campanhã'},{name:'圣本托火车站',local:'Estação de São Bento',query:'Estação de São Bento Porto'},{name:'莱罗书店',local:'Livraria Lello',detail:'需关注预约及排队',query:'Livraria Lello Porto'},{name:'教士塔',local:'Torre dos Clérigos',detail:'登塔可选，体力不足可只看外观',query:'Torre dos Clérigos Porto'},{name:'波尔图主教座堂',local:'Sé do Porto',detail:'外观与广场优先',query:'Sé do Porto'},{name:'里贝拉老城',local:'Ribeira',detail:'午餐与河岸漫步',query:'Ribeira Porto'},{name:'路易一世大桥',local:'Ponte de Dom Luís I',query:'Ponte de Dom Luís I Porto'},{name:'莫罗花园',local:'Jardim do Morro',detail:'可选塞拉山观景点；返程前留足时间',query:'Jardim do Morro Porto'},{name:'波尔图返程 → 里斯本',local:'Porto → Lisboa',time:'晚间'}],note:'PDF 原路线较短；七景点版增加书店、教士塔、莫罗花园。返程前预留车站接驳时间；若到达晚或排队长，优先舍弃书店内部/登塔。',transport:'PDF 记载 AP31 去程、AP36 返程；2027 年班次、票价与实际出发站待铁路官网复核。',stay:'里斯本原酒店连住。',status:'PDF 标注火车票待 2027 年开放预订；本网站不将列车班次视为已确认。'},
-{date:'02/09',weekday:'周二',city:'里斯本周边',title:'大西洋海岸顺时针小环线｜Circuito Atlântico',summary:'卡斯凯什 → 地狱之口 → 罗卡角 → 海滨小镇 → 辛特拉 → 里斯本。',tag:'海岸 · 包车/接驳',stops:[{name:'里斯本',local:'Lisboa',time:'08:30 左右出发',query:'Lisboa'},{name:'卡斯凯什',local:'Cascais',query:'Cascais Portugal'},{name:'地狱之口',local:'Boca do Inferno',query:'Boca do Inferno Cascais'},{name:'罗卡角',local:'Cabo da Roca',query:'Cabo da Roca'},{name:'阿泽尼亚什杜马尔',local:'Azenhas do Mar',query:'Azenhas do Mar'},{name:'辛特拉历史中心',local:'Centro Histórico de Sintra',query:'Centro Histórico de Sintra'},{name:'里斯本',local:'Lisboa',time:'返回',query:'Lisboa'}],note:'海岸路线天气和日照影响较大；PDF 以顺路外观/短停为主，辛特拉不强行叠加多个宫殿内部。',transport:'PDF 为包车/接驳思路；具体车辆及时间待确认。',stay:'里斯本原酒店连住。',status:'景点停留时间与车辆预订状态需确认。'},
-{date:'02/10',weekday:'周三',city:'里斯本 → 塞维利亚',title:'里斯本市内漫游 → 晚班机塞维利亚｜Lisboa → Sevilla',summary:'上午贝伦区，下午老城；机场出发时间是不可压缩的硬约束。',tag:'步行 · 航班',stops:[{name:'热罗尼莫斯修道院',local:'Mosteiro dos Jerónimos',time:'上午',detail:'优先入内；实际开放与预约待核',query:'Mosteiro dos Jerónimos'},{name:'贝伦蛋挞店',local:'Pastéis de Belém',query:'Pastéis de Belém'},{name:'大发现纪念碑',local:'Padrão dos Descobrimentos',detail:'以外观为主',query:'Padrão dos Descobrimentos'},{name:'贝伦塔',local:'Torre de Belém',detail:'以外观为主',query:'Torre de Belém'},{name:'商业广场',local:'Praça do Comércio',query:'Praça do Comércio Lisboa'},{name:'奥古斯塔街',local:'Rua Augusta',query:'Rua Augusta Lisboa'},{name:'里斯本主教座堂',local:'Sé de Lisboa',query:'Sé de Lisboa'},{name:'圣卢西亚观景台',local:'Miradouro de Santa Luzia',query:'Miradouro de Santa Luzia'},{name:'阿尔法玛老城',local:'Alfama',detail:'若时间不足，此段缩短或取消',query:'Alfama Lisboa'},{name:'里斯本机场 → 塞维利亚',local:'LIS → SVQ',time:'PDF 记录晚班机'}],note:'重要：PDF 原版景点少于最新九景点版。必须先按实际航班、行李领取和机场接驳倒排；下午老城为可删减项目，不能为打卡耽误飞机。',transport:'PDF 记录 TAP TP1106 晚班机（约 21:45–23:45）；时刻需以订单与航司复核。',stay:'塞维利亚酒店，PDF 提供旧城区等住宿区域。',status:'PDF 标注此航班已订；景点预约、酒店地址和机场交通待核。'},
-{date:'02/11',weekday:'周四',city:'塞维利亚 → 格拉纳达',title:'塞维利亚半日 → 晚间格拉纳达｜Sevilla → Granada',summary:'以塞维利亚王宫为核心，傍晚转场。',tag:'步行 · 铁路',stops:[{name:'塞维利亚主教座堂 / 希拉尔达塔',local:'Catedral de Sevilla / La Giralda',query:'Catedral de Sevilla'},{name:'塞维利亚王宫',local:'Real Alcázar de Sevilla',detail:'需关注门票预约',query:'Real Alcázar de Sevilla'},{name:'大主教宫周边',local:'Palacio Arzobispal de Sevilla',query:'Palacio Arzobispal de Sevilla'},{name:'西班牙广场',local:'Plaza de España',query:'Plaza de España Sevilla'},{name:'玛丽亚·路易莎公园',local:'Parque de María Luisa',query:'Parque de María Luisa Sevilla'},{name:'塞维利亚圣胡斯塔站',local:'Sevilla-Santa Justa',time:'傍晚出发',query:'Sevilla Santa Justa'},{name:'格拉纳达站',local:'Estación de Granada',time:'晚间抵达',query:'Estación de Granada'}],note:'王宫和主教座堂如都入内，半日较紧；优先按门票时段调整。',transport:'PDF 列出晚间铁路转场，具体 2027 班次待核。',stay:'格拉纳达住宿一晚。',status:'王宫/铁路预订状态请以实际订单为准。'},
-{date:'02/12',weekday:'周五',city:'格拉纳达 → 马德里',title:'阿尔罕布拉宫 → 晚间马德里｜Granada → Madrid',summary:'阿尔罕布拉宫是当日核心，预留入园与行李时间。',tag:'预约 · 铁路',stops:[{name:'阿尔罕布拉宫',local:'Alhambra',time:'上午',detail:'预约门票并核对纳斯里德宫入场时段',query:'Alhambra Granada'},{name:'纳斯里德宫',local:'Palacios Nazaríes',query:'Palacios Nazaríes Granada'},{name:'阿尔拜辛',local:'Albaicín',query:'Albaicín Granada'},{name:'圣尼古拉斯观景台',local:'Mirador de San Nicolás',query:'Mirador de San Nicolás Granada'},{name:'格拉纳达站',local:'Estación de Granada',time:'傍晚',query:'Estación de Granada'},{name:'马德里阿托查站',local:'Madrid-Puerta de Atocha-Almudena Grandes',time:'晚间',query:'Madrid Puerta de Atocha'}],note:'阿尔罕布拉宫以预约时段为准，阿尔拜辛与观景台视体力删减。',transport:'PDF 规划格拉纳达 → 马德里铁路，班次与车票待核。',stay:'马德里市区酒店。',status:'阿尔罕布拉宫门票与铁路需确认。'},
-{date:'02/13',weekday:'周六',city:'马德里',title:'马德里老城与王宫｜Madrid histórico',summary:'以王宫为核心的市中心步行日。',tag:'城市步行',stops:[{name:'马德里王宫',local:'Palacio Real de Madrid',time:'上午',query:'Palacio Real de Madrid'},{name:'阿穆德纳圣母主教座堂',local:'Catedral de la Almudena',query:'Catedral de la Almudena'},{name:'马约尔广场',local:'Plaza Mayor',query:'Plaza Mayor Madrid'},{name:'圣米格尔市场',local:'Mercado de San Miguel',query:'Mercado de San Miguel'},{name:'太阳门广场',local:'Puerta del Sol',query:'Puerta del Sol Madrid'},{name:'格兰大道',local:'Gran Vía',query:'Gran Vía Madrid'}],note:'王宫入场时间优先；市中心步行景点可按体力自由调整。',transport:'市区步行及公共交通。',stay:'马德里市区酒店。',status:'王宫门票待核。'},
-{date:'02/14',weekday:'周日',city:'托莱多',title:'托莱多往返｜Madrid ⇄ Toledo',summary:'马德里出发，托莱多古城步行，傍晚返回。',tag:'铁路 · 古城',stops:[{name:'马德里阿托查站',local:'Madrid-Puerta de Atocha-Almudena Grandes',time:'早间',query:'Madrid Puerta de Atocha'},{name:'托莱多站',local:'Estación de Toledo',query:'Estación de Toledo'},{name:'山谷观景台',local:'Mirador del Valle',query:'Mirador del Valle Toledo'},{name:'圣马丁桥',local:'Puente de San Martín',query:'Puente de San Martín Toledo'},{name:'托莱多主教座堂',local:'Catedral Primada de Toledo',query:'Catedral Primada de Toledo'},{name:'索科多韦尔广场',local:'Plaza de Zocodover',query:'Plaza de Zocodover'},{name:'马德里',local:'Madrid',time:'傍晚返回',query:'Madrid'}],note:'托莱多坡道较多；观景台与老城之间建议合理接驳，不要全程硬走。',transport:'PDF 规划 Avant 往返，2027 车次和预订需核实。',stay:'马德里市区酒店。',status:'车票和教堂开放情况待核。'},
-{date:'02/15',weekday:'周一',city:'马德里 → 机场',title:'普拉多与丽池公园 → 机场酒店｜Madrid → Aeropuerto',summary:'保留 PDF 中完整的白天游览，而不是纯交通日。',tag:'博物馆 · 机场酒店',stops:[{name:'普拉多博物馆',local:'Museo Nacional del Prado',time:'上午',query:'Museo Nacional del Prado'},{name:'丽池公园',local:'Parque del Retiro',query:'Parque del Retiro'},{name:'萨拉曼卡区',local:'Barrio de Salamanca',query:'Barrio de Salamanca Madrid'},{name:'马德里机场',local:'Aeropuerto Adolfo Suárez Madrid-Barajas',time:'傍晚',query:'Madrid Barajas Airport'},{name:'机场酒店',local:'Hotel de aeropuerto',time:'入住'}],note:'次日清晨航班，今晚务必确认航站楼、酒店班车首班时间及叫车方案。',transport:'市区 → 马德里巴拉哈斯机场，具体接驳待确认。',stay:'马德里机场酒店一晚。',status:'酒店与机场接驳信息待确认。'},
-{date:'02/16',weekday:'周二',city:'返程',title:'马德里 → 伊斯坦布尔 → 北京｜Madrid → İstanbul → Beijing',summary:'清晨出发，经伊斯坦布尔转机，预计次日抵京。',tag:'国际航班',stops:[{name:'机场酒店',local:'Hotel de aeropuerto',time:'凌晨出发'},{name:'马德里机场',local:'Aeropuerto Adolfo Suárez Madrid-Barajas',time:'航班前办理手续',query:'Madrid Barajas Airport'},{name:'伊斯坦布尔机场',local:'İstanbul Havalimanı',time:'转机',query:'Istanbul Airport'},{name:'北京首都国际机场',local:'Beijing Capital International Airport',time:'预计 02/17 抵达',query:'Beijing Capital International Airport'}],note:'PDF 记录 TK1360 / TK196；核对实际机票日期、航站楼、行李直挂与转机时间。',transport:'PDF 记录 TK1360 06:15 → 12:30；TK196 17:05 → 次日 07:00。',stay:'无；返程航班。',status:'PDF 标注国际机票已订；以电子客票为准。'}]};
+const trip = {
+  "title": "2027 春节西葡旅行",
+  "version": "V2 · 2026.10.23",
+  "updated": "2026-10-23",
+  "source": "Schengen_Visa_Travel_Itinerary_2027_EN_CN_Revised.xlsx",
+  "hotels": {
+    "lis": {
+      "name": "我的故事特茹酒店｜My Story Hotel Tejo",
+      "address": "Rua dos Condes de Monsanto 2, Santa Maria Maior, 1100-159 Lisbon, Portugal",
+      "phone": "+351 218 866 182",
+      "checkin": "2027-02-07",
+      "checkout": "2027-02-10",
+      "nights": 3,
+      "query": "My Story Hotel Tejo Rua dos Condes de Monsanto 2 Lisboa"
+    },
+    "sev": {
+      "name": "贝克尔酒店｜Hotel Bécquer",
+      "address": "Calle Reyes Católicos 4, 41001 Seville, Spain",
+      "phone": "+34 954 228 900",
+      "checkin": "2027-02-10",
+      "checkout": "2027-02-12",
+      "nights": 2,
+      "query": "Hotel Bécquer Calle Reyes Católicos 4 Sevilla"
+    },
+    "mad": {
+      "name": "加泰罗尼亚丽池酒店｜Hotel Catalonia El Retiro",
+      "address": "Av. de la Ciudad de Barcelona 113, 28007 Madrid, Spain",
+      "phone": "+34 914 341 120",
+      "checkin": "2027-02-12",
+      "checkout": "2027-02-15",
+      "nights": 3,
+      "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid"
+    },
+    "air": {
+      "name": "阿克索尔费里亚酒店｜Axor Feria Hotel",
+      "address": "Calle de Campezo 4, 28022 Madrid, Spain",
+      "phone": "+34 913 122 379",
+      "checkin": "2027-02-15",
+      "checkout": "2027-02-16",
+      "nights": 1,
+      "query": "Axor Feria Hotel Calle de Campezo 4 Madrid"
+    }
+  },
+  "days": [
+    {
+      "date": "02/07",
+      "weekday": "周日",
+      "city": "抵达里斯本",
+      "title": "北京 → 伊斯坦布尔 → 里斯本",
+      "summary": "国际航班日。夜间抵达后直接乘出租车到酒店休息。",
+      "hotel": "lis",
+      "stops": [
+        {
+          "name": "北京首都国际机场 T3",
+          "local": "Beijing Capital International Airport T3",
+          "query": "Beijing Capital International Airport Terminal 3",
+          "time": "08:40 起飞",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "伊斯坦布尔机场",
+          "local": "İstanbul Havalimanı",
+          "query": "Istanbul Airport",
+          "time": "14:20 抵达；21:20 转机起飞",
+          "detail": "转机停留 7 小时。",
+          "status": ""
+        },
+        {
+          "name": "里斯本机场 T1",
+          "local": "Aeroporto Humberto Delgado — Terminal 1",
+          "query": "Lisbon Airport Terminal 1",
+          "time": "23:25 抵达",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "我的故事特茹酒店",
+          "local": "My Story Hotel Tejo",
+          "query": "My Story Hotel Tejo Rua dos Condes de Monsanto 2 Lisboa",
+          "time": "抵达后入住",
+          "detail": "预订从 2 月 7 日开始；实际到店可能已是 2 月 8 日凌晨。",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "flight",
+          "title": "土耳其航空 TK197",
+          "text": "北京首都 T3（PEK）08:40 → 伊斯坦布尔（IST）14:20",
+          "status": "已订"
+        },
+        {
+          "kind": "flight",
+          "title": "土耳其航空 TK1779",
+          "text": "伊斯坦布尔（IST）21:20 → 里斯本 T1（LIS）23:25",
+          "status": "已订"
+        },
+        {
+          "kind": "local",
+          "title": "机场 → 酒店",
+          "text": "出租车。",
+          "status": ""
+        }
+      ],
+      "note": "不安排景点。提前告知酒店凌晨到店，并确认保留 2 月 7 日的房间。",
+      "todos": [
+        "里斯本酒店凌晨入住与保留房间：待酒店确认。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "土耳其航空 TK197：北京首都 T3（PEK）08:40 → 伊斯坦布尔（IST）14:20；土耳其航空 TK1779：伊斯坦布尔（IST）21:20 → 里斯本 T1（LIS）23:25；机场 → 酒店：出租车。",
+      "stay": "我的故事特茹酒店｜My Story Hotel Tejo（已预订）｜Rua dos Condes de Monsanto 2, Santa Maria Maior, 1100-159 Lisbon, Portugal",
+      "status": "里斯本酒店凌晨入住与保留房间：待酒店确认。"
+    },
+    {
+      "date": "02/08",
+      "weekday": "周一",
+      "city": "波尔图",
+      "title": "里斯本往返波尔图｜Lisboa ⇄ Porto",
+      "summary": "当天往返：保留原网站七景点路线，当晚仍返回里斯本酒店。",
+      "hotel": "lis",
+      "stops": [
+        {
+          "name": "里斯本东方站",
+          "local": "Lisboa Oriente",
+          "time": "早间出发",
+          "query": "Lisboa Oriente"
+        },
+        {
+          "name": "波尔图坎帕尼扬站",
+          "local": "Porto Campanhã",
+          "query": "Porto Campanhã"
+        },
+        {
+          "name": "圣本托火车站",
+          "local": "Estação de São Bento",
+          "query": "Estação de São Bento Porto"
+        },
+        {
+          "name": "莱罗书店",
+          "local": "Livraria Lello",
+          "detail": "需关注预约及排队",
+          "query": "Livraria Lello Porto"
+        },
+        {
+          "name": "教士塔",
+          "local": "Torre dos Clérigos",
+          "detail": "登塔可选，体力不足可只看外观",
+          "query": "Torre dos Clérigos Porto"
+        },
+        {
+          "name": "波尔图主教座堂",
+          "local": "Sé do Porto",
+          "detail": "外观与广场优先",
+          "query": "Sé do Porto"
+        },
+        {
+          "name": "里贝拉老城",
+          "local": "Ribeira",
+          "detail": "午餐与河岸漫步",
+          "query": "Ribeira Porto"
+        },
+        {
+          "name": "路易一世大桥",
+          "local": "Ponte de Dom Luís I",
+          "query": "Ponte de Dom Luís I Porto"
+        },
+        {
+          "name": "莫罗花园",
+          "local": "Jardim do Morro",
+          "detail": "可选塞拉山观景点；返程前留足时间",
+          "query": "Jardim do Morro Porto"
+        },
+        {
+          "name": "波尔图返程 → 里斯本",
+          "local": "Porto → Lisboa",
+          "time": "晚间"
+        }
+      ],
+      "transports": [
+        {
+          "kind": "intercity",
+          "title": "里斯本 ⇄ 波尔图",
+          "text": "保留原网站往返安排。往返票据及最终班次未包含在本次行程单中，待补充；旧版 AP31／AP36 为参考，不作为已订信息。",
+          "status": "待确认"
+        }
+      ],
+      "note": "七景点版增加书店、教士塔、莫罗花园。返程前预留车站接驳时间；若到达晚或排队长，优先舍弃书店内部/登塔。",
+      "todos": [
+        "波尔图往返票据及最终班次：待补充确认。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "里斯本 ⇄ 波尔图：保留原网站往返安排。往返票据及最终班次未包含在本次行程单中，待补充；旧版 AP31／AP36 为参考，不作为已订信息。",
+      "stay": "我的故事特茹酒店｜My Story Hotel Tejo（已预订）｜Rua dos Condes de Monsanto 2, Santa Maria Maior, 1100-159 Lisbon, Portugal",
+      "status": "波尔图往返票据及最终班次：待补充确认。"
+    },
+    {
+      "date": "02/09",
+      "weekday": "周二",
+      "city": "里斯本周边",
+      "title": "卡斯凯什 → 辛特拉海岸线一日游",
+      "summary": "从里斯本出发，沿海岸前往辛特拉历史中心，傍晚返回同一家酒店。",
+      "hotel": "lis",
+      "stops": [
+        {
+          "name": "卡斯凯什",
+          "local": "Cascais",
+          "query": "Cascais Portugal",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "地狱之口",
+          "local": "Boca do Inferno",
+          "query": "Boca do Inferno Cascais",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "罗卡角",
+          "local": "Cabo da Roca",
+          "query": "Cabo da Roca",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "辛特拉历史中心",
+          "local": "Centro Histórico de Sintra",
+          "query": "Centro Histórico de Sintra",
+          "time": "",
+          "detail": "",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "local",
+          "title": "全日交通",
+          "text": "出租车：里斯本 → 卡斯凯什 → 地狱之口 → 罗卡角 → 辛特拉 → 里斯本。",
+          "status": ""
+        }
+      ],
+      "note": "按行程单只安排辛特拉历史中心；今天不额外加入宫殿参观。各段出租车需自行安排。",
+      "todos": [],
+      "tag": "当晚酒店已订",
+      "transport": "全日交通：出租车：里斯本 → 卡斯凯什 → 地狱之口 → 罗卡角 → 辛特拉 → 里斯本。",
+      "stay": "我的故事特茹酒店｜My Story Hotel Tejo（已预订）｜Rua dos Condes de Monsanto 2, Santa Maria Maior, 1100-159 Lisbon, Portugal",
+      "status": "以最新行程单与实际票据为准。"
+    },
+    {
+      "date": "02/10",
+      "weekday": "周三",
+      "city": "里斯本 → 塞维利亚",
+      "title": "贝伦区游览 → 晚班机赴塞维利亚",
+      "summary": "退房后游览贝伦区，回酒店取行李，再前往机场。",
+      "hotel": "sev",
+      "stops": [
+        {
+          "name": "热罗尼莫斯修道院",
+          "local": "Mosteiro dos Jerónimos",
+          "query": "Mosteiro dos Jerónimos Lisboa",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "贝伦塔",
+          "local": "Torre de Belém",
+          "query": "Torre de Belém Lisboa",
+          "time": "",
+          "detail": "外观参观。",
+          "status": ""
+        },
+        {
+          "name": "我的故事特茹酒店",
+          "local": "My Story Hotel Tejo",
+          "query": "My Story Hotel Tejo Rua dos Condes de Monsanto 2 Lisboa",
+          "time": "",
+          "detail": "返回取寄存行李；退房与寄存安排以酒店确认为准。",
+          "status": ""
+        },
+        {
+          "name": "里斯本机场 T1",
+          "local": "Aeroporto Humberto Delgado — Terminal 1",
+          "query": "Lisbon Airport Terminal 1",
+          "time": "21:45 起飞",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "塞维利亚机场",
+          "local": "Aeropuerto de Sevilla",
+          "query": "Seville Airport",
+          "time": "23:45 抵达",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "贝克尔酒店",
+          "local": "Hotel Bécquer",
+          "query": "Hotel Bécquer Calle Reyes Católicos 4 Sevilla",
+          "time": "",
+          "detail": "机场乘出租车前往酒店；可能于 2 月 11 日凌晨到店。",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "flight",
+          "title": "葡萄牙航空 TP1106",
+          "text": "里斯本 T1（LIS）21:45 → 塞维利亚（SVQ）23:45",
+          "status": "已订"
+        },
+        {
+          "kind": "local",
+          "title": "市内及机场接驳",
+          "text": "里斯本市内：出租车、地铁及步行；取行李后出租车到机场；塞维利亚机场到酒店乘出租车。",
+          "status": ""
+        }
+      ],
+      "note": "航班时间为两地当地时间。今天从里斯本酒店退房，入住塞维利亚酒店。",
+      "todos": [
+        "贝克尔酒店深夜／次日凌晨入住与保留房间：待酒店确认。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "葡萄牙航空 TP1106：里斯本 T1（LIS）21:45 → 塞维利亚（SVQ）23:45；市内及机场接驳：里斯本市内：出租车、地铁及步行；取行李后出租车到机场；塞维利亚机场到酒店乘出租车。",
+      "stay": "贝克尔酒店｜Hotel Bécquer（已预订）｜Calle Reyes Católicos 4, 41001 Seville, Spain",
+      "status": "贝克尔酒店深夜／次日凌晨入住与保留房间：待酒店确认。"
+    },
+    {
+      "date": "02/11",
+      "weekday": "周四",
+      "city": "格拉纳达往返",
+      "title": "阿尔罕布拉宫当天往返｜Sevilla ⇄ Granada",
+      "summary": "仅安排阿尔罕布拉宫一日游；参观后返回塞维利亚，不在格拉纳达过夜。",
+      "hotel": "sev",
+      "stops": [
+        {
+          "name": "塞维利亚武器广场汽车站",
+          "local": "Estación de Autobuses Plaza de Armas",
+          "query": "Estación de Autobuses Plaza de Armas Sevilla",
+          "time": "",
+          "detail": "往返大巴班次及实际乘车站以购票结果为准。",
+          "status": ""
+        },
+        {
+          "name": "格拉纳达汽车站",
+          "local": "Estación de Autobuses de Granada",
+          "query": "Estación de Autobuses de Granada",
+          "time": "",
+          "detail": "下车后出租车前往阿尔罕布拉宫。",
+          "status": ""
+        },
+        {
+          "name": "阿尔罕布拉宫",
+          "local": "Alhambra",
+          "query": "Alhambra Granada",
+          "time": "",
+          "detail": "综合参观门票已购买。",
+          "status": "门票已购"
+        },
+        {
+          "name": "纳斯里德宫",
+          "local": "Palacios Nazaríes",
+          "query": "Palacios Nazaríes Granada",
+          "time": "13:00 指定入场",
+          "detail": "提前到达指定入口；以门票及景区要求为准。",
+          "status": "固定入场"
+        },
+        {
+          "name": "返回塞维利亚贝克尔酒店",
+          "local": "Hotel Bécquer",
+          "query": "Hotel Bécquer Calle Reyes Católicos 4 Sevilla",
+          "time": "当晚返回",
+          "detail": "",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "coach",
+          "title": "塞维利亚 ⇄ 格拉纳达",
+          "text": "城际大巴往返。最新行程单未提供班次或出票信息，购票及出发时间待落实。",
+          "status": "待安排"
+        },
+        {
+          "kind": "local",
+          "title": "格拉纳达汽车站 ⇄ 阿尔罕布拉宫",
+          "text": "出租车往返；宫区内步行。",
+          "status": ""
+        }
+      ],
+      "note": "选择大巴时，务必为 13:00 纳斯里德宫固定入场预留到站、出租车接驳与入园时间。大件行李留在塞维利亚酒店。",
+      "todos": [
+        "格拉纳达往返大巴：待落实购票及班次。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "塞维利亚 ⇄ 格拉纳达：城际大巴往返。最新行程单未提供班次或出票信息，购票及出发时间待落实。；格拉纳达汽车站 ⇄ 阿尔罕布拉宫：出租车往返；宫区内步行。",
+      "stay": "贝克尔酒店｜Hotel Bécquer（已预订）｜Calle Reyes Católicos 4, 41001 Seville, Spain",
+      "status": "格拉纳达往返大巴：待落实购票及班次。"
+    },
+    {
+      "date": "02/12",
+      "weekday": "周五",
+      "city": "塞维利亚 → 马德里",
+      "title": "塞维利亚游览 → 高铁赴马德里",
+      "summary": "白天游览塞维利亚，晚上乘已订高铁前往马德里。",
+      "hotel": "mad",
+      "stops": [
+        {
+          "name": "塞维利亚王宫",
+          "local": "Real Alcázar de Sevilla",
+          "query": "Real Alcázar de Sevilla",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "塞维利亚主教座堂及吉拉尔达塔",
+          "local": "Catedral de Sevilla y Giralda",
+          "query": "Catedral de Sevilla",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "西班牙广场",
+          "local": "Plaza de España",
+          "query": "Plaza de España Sevilla",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "塞维利亚圣胡斯塔站",
+          "local": "Sevilla-Santa Justa",
+          "query": "Sevilla Santa Justa",
+          "time": "18:08 发车",
+          "detail": "安排好取行李及前往车站的时间，提前到站。",
+          "status": ""
+        },
+        {
+          "name": "马德里阿托查站",
+          "local": "Madrid-Puerta de Atocha",
+          "query": "Madrid Puerta de Atocha",
+          "time": "20:46 抵达",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "加泰罗尼亚丽池酒店",
+          "local": "Hotel Catalonia El Retiro",
+          "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid",
+          "time": "",
+          "detail": "从阿托查站乘出租车或地铁到酒店。",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "rail",
+          "title": "iryo 高速列车 06177",
+          "text": "塞维利亚圣胡斯塔站 18:08 → 马德里阿托查站 20:46",
+          "status": "已订"
+        },
+        {
+          "kind": "local",
+          "title": "市内出行及到店",
+          "text": "塞维利亚：出租车、地铁及步行；马德里阿托查站 → 酒店：出租车或地铁。",
+          "status": ""
+        }
+      ],
+      "note": "王宫和主教座堂的参观时间需与高铁衔接；景点预约状态未在最新行程单中列明。",
+      "todos": [],
+      "tag": "当晚酒店已订",
+      "transport": "iryo 高速列车 06177：塞维利亚圣胡斯塔站 18:08 → 马德里阿托查站 20:46；市内出行及到店：塞维利亚：出租车、地铁及步行；马德里阿托查站 → 酒店：出租车或地铁。",
+      "stay": "加泰罗尼亚丽池酒店｜Hotel Catalonia El Retiro（已预订）｜Av. de la Ciudad de Barcelona 113, 28007 Madrid, Spain",
+      "status": "以最新行程单与实际票据为准。"
+    },
+    {
+      "date": "02/13",
+      "weekday": "周六",
+      "city": "马德里",
+      "title": "马德里王宫与市中心｜Madrid",
+      "summary": "以王宫、广场和格兰维亚大道为主的市中心游览。",
+      "hotel": "mad",
+      "stops": [
+        {
+          "name": "马德里王宫",
+          "local": "Palacio Real de Madrid",
+          "query": "Palacio Real de Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "马约尔广场",
+          "local": "Plaza Mayor",
+          "query": "Plaza Mayor Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "太阳门广场",
+          "local": "Puerta del Sol",
+          "query": "Puerta del Sol Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "格兰维亚大道",
+          "local": "Gran Vía",
+          "query": "Gran Vía Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "local",
+          "title": "市内交通",
+          "text": "出租车、地铁及步行。",
+          "status": ""
+        }
+      ],
+      "note": "按照最新行程单安排四个核心地点；入内参观需另行核对预约与开放情况。",
+      "todos": [],
+      "tag": "当晚酒店已订",
+      "transport": "市内交通：出租车、地铁及步行。",
+      "stay": "加泰罗尼亚丽池酒店｜Hotel Catalonia El Retiro（已预订）｜Av. de la Ciudad de Barcelona 113, 28007 Madrid, Spain",
+      "status": "以最新行程单与实际票据为准。"
+    },
+    {
+      "date": "02/14",
+      "weekday": "周日",
+      "city": "托莱多往返",
+      "title": "托莱多一日游｜Madrid ⇄ Toledo",
+      "summary": "乘城际大巴往返，傍晚回到马德里酒店。",
+      "hotel": "mad",
+      "stops": [
+        {
+          "name": "河谷观景台",
+          "local": "Mirador del Valle",
+          "query": "Mirador del Valle Toledo",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "圣马丁桥",
+          "local": "Puente de San Martín",
+          "query": "Puente de San Martín Toledo",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "托莱多主教座堂",
+          "local": "Catedral de Toledo",
+          "query": "Catedral de Toledo",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "索科多韦尔广场",
+          "local": "Plaza de Zocodover",
+          "query": "Plaza de Zocodover Toledo",
+          "time": "",
+          "detail": "",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "coach",
+          "title": "马德里 ⇄ 托莱多",
+          "text": "城际大巴往返。行程单未列班次或出票信息，乘车站与时间待确认。",
+          "status": "待安排"
+        },
+        {
+          "kind": "local",
+          "title": "托莱多市内",
+          "text": "出租车及步行。",
+          "status": ""
+        }
+      ],
+      "note": "保留大巴返程缓冲时间；河谷观景台与老城区之间可乘出租车。",
+      "todos": [
+        "托莱多往返大巴：待确认购票、班次及乘车站。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "马德里 ⇄ 托莱多：城际大巴往返。行程单未列班次或出票信息，乘车站与时间待确认。；托莱多市内：出租车及步行。",
+      "stay": "加泰罗尼亚丽池酒店｜Hotel Catalonia El Retiro（已预订）｜Av. de la Ciudad de Barcelona 113, 28007 Madrid, Spain",
+      "status": "托莱多往返大巴：待确认购票、班次及乘车站。"
+    },
+    {
+      "date": "02/15",
+      "weekday": "周一",
+      "city": "马德里 → 机场酒店",
+      "title": "普拉多与丽池公园 → 机场酒店",
+      "summary": "白天游览，下午前往机场附近酒店，准备次日早班机。",
+      "hotel": "air",
+      "stops": [
+        {
+          "name": "普拉多博物馆",
+          "local": "Museo Nacional del Prado",
+          "query": "Museo Nacional del Prado Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "丽池公园",
+          "local": "Parque del Retiro",
+          "query": "Parque del Retiro Madrid",
+          "time": "",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "阿克索尔费里亚酒店",
+          "local": "Axor Feria Hotel",
+          "query": "Axor Feria Hotel Calle de Campezo 4 Madrid",
+          "time": "下午入住",
+          "detail": "由马德里市区乘出租车前往。",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "local",
+          "title": "市内与换酒店",
+          "text": "市内观光：出租车、地铁及步行。马德里市区 → Axor Feria Hotel：出租车。",
+          "status": ""
+        }
+      ],
+      "note": "今天从加泰罗尼亚丽池酒店退房。次日 06:15 起飞，请提前确认机场酒店凌晨接送时间及实际航站楼。",
+      "todos": [
+        "Axor Feria 凌晨机场接送：待确认班车时间、预约方式和航站楼；必要时预约出租车。"
+      ],
+      "tag": "当晚酒店已订",
+      "transport": "市内与换酒店：市内观光：出租车、地铁及步行。马德里市区 → Axor Feria Hotel：出租车。",
+      "stay": "阿克索尔费里亚酒店｜Axor Feria Hotel（已预订）｜Calle de Campezo 4, 28022 Madrid, Spain",
+      "status": "Axor Feria 凌晨机场接送：待确认班车时间、预约方式和航站楼；必要时预约出租车。"
+    },
+    {
+      "date": "02/16",
+      "weekday": "周二",
+      "city": "返程",
+      "title": "马德里 → 伊斯坦布尔 → 北京",
+      "summary": "离开申根区，经伊斯坦布尔转机，2 月 17 日抵达北京。",
+      "hotel": null,
+      "stops": [
+        {
+          "name": "马德里巴拉哈斯机场",
+          "local": "Aeropuerto Adolfo Suárez Madrid-Barajas",
+          "query": "Adolfo Suárez Madrid Barajas Airport",
+          "time": "06:15 起飞",
+          "detail": "实际出发航站楼以机票／航司通知为准。",
+          "status": ""
+        },
+        {
+          "name": "伊斯坦布尔机场",
+          "local": "İstanbul Havalimanı",
+          "query": "Istanbul Airport",
+          "time": "12:30 抵达；17:05 转机起飞",
+          "detail": "",
+          "status": ""
+        },
+        {
+          "name": "北京首都国际机场",
+          "local": "Beijing Capital International Airport",
+          "query": "Beijing Capital International Airport",
+          "time": "2 月 17 日 07:00 抵达",
+          "detail": "",
+          "status": ""
+        }
+      ],
+      "transports": [
+        {
+          "kind": "flight",
+          "title": "土耳其航空 TK1360",
+          "text": "马德里（MAD）06:15 → 伊斯坦布尔（IST）12:30",
+          "status": "已订"
+        },
+        {
+          "kind": "flight",
+          "title": "土耳其航空 TK196",
+          "text": "伊斯坦布尔（IST）17:05 → 北京（PEK）07:00（次日，2 月 17 日）",
+          "status": "已订"
+        },
+        {
+          "kind": "local",
+          "title": "机场酒店 → 机场",
+          "text": "酒店接驳班车或出租车；凌晨接送安排待酒店确认。",
+          "status": "待确认"
+        }
+      ],
+      "note": "今晨从机场酒店退房；当晚在飞机上，无酒店住宿。所有航班时刻均为当地时间。",
+      "todos": [
+        "凌晨机场接送：前一日落实，未确认前不要按班车已安排处理。"
+      ],
+      "tag": "返程",
+      "transport": "土耳其航空 TK1360：马德里（MAD）06:15 → 伊斯坦布尔（IST）12:30；土耳其航空 TK196：伊斯坦布尔（IST）17:05 → 北京（PEK）07:00（次日，2 月 17 日）；机场酒店 → 机场：酒店接驳班车或出租车；凌晨接送安排待酒店确认。",
+      "stay": "飞机上／无酒店住宿",
+      "status": "凌晨机场接送：前一日落实，未确认前不要按班车已安排处理。"
+    }
+  ]
+};
