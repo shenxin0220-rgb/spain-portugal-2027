@@ -1,7 +1,7 @@
 const trip = {
   "title": "2027 春节西葡旅行",
-  "version": "V2 · 2026.10.23",
-  "updated": "2026-10-23",
+  "version": "V2 · 马德里新版 · 2026.11.14",
+  "updated": "2026-11-14",
   "source": "Schengen_Visa_Travel_Itinerary_2027_EN_CN_Revised.xlsx",
   "hotels": {
     "lis": {
@@ -483,98 +483,181 @@ const trip = {
     {
       "date": "02/13",
       "weekday": "周六",
-      "city": "马德里",
-      "title": "马德里王宫与市中心｜Madrid",
-      "summary": "以王宫、广场和格兰维亚大道为主的市中心游览。",
+      "city": "马德里·皇宫线",
+      "title": "马德里皇宫历史线｜Madrid",
+      "summary": "皇宫与历史街区 → 德波神庙日落 → Riu 屋顶夜景。以下游览时段为建议，不代表门票已预约。",
       "hotel": "mad",
       "stops": [
         {
-          "name": "马德里王宫",
+          "name": "酒店 → 马德里皇宫",
+          "local": "Hotel Catalonia El Retiro → Palacio Real de Madrid",
+          "time": "建议 09:15–10:00",
+          "detail": "建议乘出租车，预留排队和寻找入口的时间。",
+          "status": "",
+          "query": "Palacio Real de Madrid"
+        },
+        {
+          "name": "马德里皇宫",
           "local": "Palacio Real de Madrid",
-          "query": "Palacio Real de Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "建议 10:00–12:00",
+          "detail": "内部参观；建议预约 10:00 入场，门票仍需落实。",
+          "status": "",
+          "query": "Palacio Real de Madrid"
+        },
+        {
+          "name": "皇宫与主教堂观景台",
+          "local": "Mirador de la Cornisa",
+          "time": "建议 12:00–12:30",
+          "detail": "拍摄阿穆德纳主教堂、皇宫与周边街景。",
+          "status": "",
+          "query": "Mirador de la Cornisa"
+        },
+        {
+          "name": "摩尔人庄园",
+          "local": "Jardines del Campo del Moro",
+          "time": "建议 12:30–13:30",
+          "detail": "花园位于皇宫下方，按实际开放入口绕行。",
+          "status": "",
+          "query": "Jardines del Campo del Moro"
+        },
+        {
+          "name": "圣米盖尔市场",
+          "local": "Mercado de San Miguel",
+          "time": "建议 13:45–14:45",
+          "detail": "午餐、Tapas 与西班牙小吃。",
+          "status": "",
+          "query": "Mercado de San Miguel"
         },
         {
           "name": "马约尔广场",
           "local": "Plaza Mayor",
-          "query": "Plaza Mayor Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "建议 14:45–15:20",
+          "detail": "历史广场街拍，周边短暂漫步。",
+          "status": "",
+          "query": "Plaza Mayor Madrid"
         },
         {
           "name": "太阳门广场",
           "local": "Puerta del Sol",
-          "query": "Puerta del Sol Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "建议 15:20–16:00",
+          "detail": "寻找西班牙公路零公里标志。",
+          "status": "",
+          "query": "Puerta del Sol Madrid"
         },
         {
-          "name": "格兰维亚大道",
-          "local": "Gran Vía",
-          "query": "Gran Vía Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "name": "自由活动、咖啡与休息",
+          "local": "Madrid",
+          "time": "建议 16:00–17:30",
+          "detail": "为傍晚日落预留体力与移动时间。",
+          "status": "",
+          "query": ""
+        },
+        {
+          "name": "德波神庙",
+          "local": "Templo de Debod",
+          "time": "建议 17:45–19:00",
+          "detail": "日落优先。附件预估 2/13 日落约 18:47，出发前再核对天气与日落时间。",
+          "status": "",
+          "query": "Templo de Debod"
+        },
+        {
+          "name": "Riu 西班牙广场酒店 360º 屋顶酒吧",
+          "local": "Riu Plaza España 360º Rooftop Bar",
+          "time": "建议 19:15–20:15",
+          "detail": "登高看马德里夜景；入场政策、开放与费用提前核对。",
+          "status": "",
+          "query": "Riu Plaza España 360 Rooftop Bar Madrid"
+        },
+        {
+          "name": "晚餐、返回酒店",
+          "local": "Hotel Catalonia El Retiro",
+          "time": "20:15 之后",
+          "detail": "不再安排其他远距离景点。",
+          "status": "",
+          "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid"
         }
       ],
       "transports": [
         {
           "kind": "local",
-          "title": "市内交通",
-          "text": "出租车、地铁及步行。",
+          "title": "酒店往返与市中心出行",
+          "text": "往返酒店建议出租车；核心老城路段步行，必要时乘地铁或出租车。",
           "status": ""
         }
       ],
-      "note": "按照最新行程单安排四个核心地点；入内参观需另行核对预约与开放情况。",
-      "todos": [],
+      "note": "全天地点较密集。如皇宫或花园耗时超出预期，可缩短摩尔人庄园或广场停留。德波神庙日落优先，Riu 安排看夜景，不必抢日落。",
+      "todos": [
+        "马德里皇宫：建议预约 10:00，尚未提供已购门票信息。",
+        "Riu 屋顶酒吧入场政策、开放与费用：出发前核对。"
+      ],
       "tag": "当晚酒店已订",
-      "transport": "市内交通：出租车、地铁及步行。",
+      "transport": "酒店往返与市中心出行：往返酒店建议出租车；核心老城路段步行，必要时乘地铁或出租车。",
       "stay": "加泰罗尼亚丽池酒店｜Hotel Catalonia El Retiro（已预订）｜Av. de la Ciudad de Barcelona 113, 28007 Madrid, Spain",
-      "status": "以最新行程单与实际票据为准。"
+      "status": "马德里皇宫：建议预约 10:00，尚未提供已购门票信息。；Riu 屋顶酒吧入场政策、开放与费用：出发前核对。"
     },
     {
       "date": "02/14",
       "weekday": "周日",
       "city": "托莱多往返",
       "title": "托莱多一日游｜Madrid ⇄ Toledo",
-      "summary": "乘城际大巴往返，傍晚回到马德里酒店。",
+      "summary": "保留完整的托莱多当天往返，不并入马德里两天市内步行游览。",
       "hotel": "mad",
       "stops": [
         {
-          "name": "河谷观景台",
+          "name": "马德里 → 托莱多",
+          "local": "Madrid → Toledo",
+          "time": "早晨",
+          "detail": "乘长途大巴，班次与乘车站以实际订票为准。",
+          "status": "",
+          "query": ""
+        },
+        {
+          "name": "山谷观景台",
           "local": "Mirador del Valle",
-          "query": "Mirador del Valle Toledo",
-          "time": "",
-          "detail": "",
-          "status": ""
-        },
-        {
-          "name": "圣马丁桥",
-          "local": "Puente de San Martín",
-          "query": "Puente de San Martín Toledo",
-          "time": "",
-          "detail": "",
-          "status": ""
-        },
-        {
-          "name": "托莱多主教座堂",
-          "local": "Catedral de Toledo",
-          "query": "Catedral de Toledo",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "上午",
+          "detail": "先欣赏托莱多古城全景，建议乘出租车衔接。",
+          "status": "",
+          "query": "Mirador del Valle Toledo"
         },
         {
           "name": "索科多韦尔广场",
           "local": "Plaza de Zocodover",
-          "query": "Plaza de Zocodover Toledo",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "上午",
+          "detail": "进入古城，沿中世纪街道散步。",
+          "status": "",
+          "query": "Plaza de Zocodover Toledo"
+        },
+        {
+          "name": "托莱多主教座堂",
+          "local": "Catedral Primada de Toledo",
+          "time": "中午",
+          "detail": "如入内参观，按当天开放与票务时间安排。",
+          "status": "",
+          "query": "Catedral Primada de Toledo"
+        },
+        {
+          "name": "古城午餐与自由散步",
+          "local": "Casco Histórico de Toledo",
+          "time": "中午至下午",
+          "detail": "老城巷道多坡路，穿舒适鞋。",
+          "status": "",
+          "query": "Casco Histórico de Toledo"
+        },
+        {
+          "name": "圣马丁桥",
+          "local": "Puente de San Martín",
+          "time": "下午",
+          "detail": "远眺塔霍河谷、城墙和桥景。",
+          "status": "",
+          "query": "Puente de San Martín Toledo"
+        },
+        {
+          "name": "托莱多 → 马德里",
+          "local": "Toledo → Madrid",
+          "time": "傍晚",
+          "detail": "乘大巴返回，继续入住加泰罗尼亚丽池酒店。",
+          "status": "",
+          "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid"
         }
       ],
       "transports": [
@@ -591,7 +674,7 @@ const trip = {
           "status": ""
         }
       ],
-      "note": "保留大巴返程缓冲时间；河谷观景台与老城区之间可乘出租车。",
+      "note": "周日教堂参观可能受宗教活动影响，以官方开放时间为准。托莱多坡路较多，优先保留观景台与主教堂。",
       "todos": [
         "托莱多往返大巴：待确认购票、班次及乘车站。"
       ],
@@ -603,52 +686,107 @@ const trip = {
     {
       "date": "02/15",
       "weekday": "周一",
-      "city": "马德里 → 机场酒店",
-      "title": "普拉多与丽池公园 → 机场酒店",
-      "summary": "白天游览，下午前往机场附近酒店，准备次日早班机。",
+      "city": "马德里·公园线",
+      "title": "马德里公园艺术线 → 机场酒店｜Madrid",
+      "summary": "丽池公园 → 阿尔卡拉门 → 普拉多博物馆 → 取行李 → 机场酒店。约 17:00 到店，尽早休息。以下为建议时段。",
       "hotel": "air",
       "stops": [
         {
-          "name": "普拉多博物馆",
-          "local": "Museo Nacional del Prado",
-          "query": "Museo Nacional del Prado Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "name": "早餐、退房、寄存行李",
+          "local": "Hotel Catalonia El Retiro",
+          "time": "建议 08:30–09:30",
+          "detail": "从市区酒店退房，先寄存行李。",
+          "status": "",
+          "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid"
         },
         {
           "name": "丽池公园",
           "local": "Parque del Retiro",
-          "query": "Parque del Retiro Madrid",
-          "time": "",
-          "detail": "",
-          "status": ""
+          "time": "建议 09:30–10:15",
+          "detail": "湖畔和主要林荫步道散步。",
+          "status": "",
+          "query": "Parque del Retiro Madrid"
+        },
+        {
+          "name": "丽池玫瑰园",
+          "local": "La Rosaleda del Retiro",
+          "time": "建议 10:15–10:35",
+          "detail": "可选：2 月非主要花期，快速经过即可，也可跳过。",
+          "status": "可选",
+          "query": "La Rosaleda del Retiro"
+        },
+        {
+          "name": "阿尔卡拉门",
+          "local": "Puerta de Alcalá",
+          "time": "建议 10:35–11:30",
+          "detail": "沿公园步行出入口拍照，路线可按现场出口调整。",
+          "status": "",
+          "query": "Puerta de Alcalá Madrid"
+        },
+        {
+          "name": "前往普拉多博物馆",
+          "local": "Museo Nacional del Prado",
+          "time": "建议 11:30–12:00",
+          "detail": "预留入口安检与预约检票时间。",
+          "status": "",
+          "query": "Museo Nacional del Prado Madrid"
+        },
+        {
+          "name": "普拉多博物馆",
+          "local": "Museo Nacional del Prado",
+          "time": "建议 12:00–14:30",
+          "detail": "馆内参观约 2–2.5 小时，建议提前买票。",
+          "status": "",
+          "query": "Museo Nacional del Prado Madrid"
+        },
+        {
+          "name": "午餐、返回市区酒店取行李",
+          "local": "Hotel Catalonia El Retiro",
+          "time": "建议 14:30–15:30",
+          "detail": "领取寄存行李后前往机场区域。",
+          "status": "",
+          "query": "Hotel Catalonia El Retiro Avenida de la Ciudad de Barcelona 113 Madrid"
         },
         {
           "name": "阿克索尔费里亚酒店",
           "local": "Axor Feria Hotel",
-          "query": "Axor Feria Hotel Calle de Campezo 4 Madrid",
-          "time": "下午入住",
-          "detail": "由马德里市区乘出租车前往。",
-          "status": ""
+          "time": "建议 15:30–17:00 前往并入住",
+          "detail": "从市中心乘出租车前往；机场酒店已预订。",
+          "status": "",
+          "query": "Axor Feria Hotel Calle de Campezo 4 Madrid"
+        },
+        {
+          "name": "晚餐、整理行李、早点休息",
+          "local": "Axor Feria Hotel",
+          "time": "17:00 以后",
+          "detail": "向酒店确认次日凌晨机场接送时刻、上车点、预约方式与航站楼。",
+          "status": "",
+          "query": ""
         }
       ],
       "transports": [
         {
           "kind": "local",
-          "title": "市内与换酒店",
-          "text": "市内观光：出租车、地铁及步行。马德里市区 → Axor Feria Hotel：出租车。",
+          "title": "市内交通与更换酒店",
+          "text": "市内出租车、地铁及步行；市中心 → Axor Feria Hotel 建议乘出租车。",
           "status": ""
+        },
+        {
+          "kind": "local",
+          "title": "次日凌晨机场接送",
+          "text": "订单含机场接送；具体凌晨班次、上车点和出发航站楼仍需向酒店预约核对，必要时改乘出租车。",
+          "status": "待确认"
         }
       ],
-      "note": "今天从加泰罗尼亚丽池酒店退房。次日 06:15 起飞，请提前确认机场酒店凌晨接送时间及实际航站楼。",
+      "note": "这天不再安排第二次日落或 Riu 夜景；Riu 已移至 2 月 13 日。约 17:00 抵达机场酒店后早点休息，为次日 06:15 返程航班准备。",
       "todos": [
-        "Axor Feria 凌晨机场接送：待确认班车时间、预约方式和航站楼；必要时预约出租车。"
+        "普拉多博物馆门票：建议提前预约 12:00 入场，尚未提供已购票信息。",
+        "机场酒店凌晨接送：确认具体发车时刻、上车点、预约要求与出发航站楼。"
       ],
       "tag": "当晚酒店已订",
-      "transport": "市内与换酒店：市内观光：出租车、地铁及步行。马德里市区 → Axor Feria Hotel：出租车。",
+      "transport": "市内交通与更换酒店：市内出租车、地铁及步行；市中心 → Axor Feria Hotel 建议乘出租车。；次日凌晨机场接送：订单含机场接送；具体凌晨班次、上车点和出发航站楼仍需向酒店预约核对，必要时改乘出租车。",
       "stay": "阿克索尔费里亚酒店｜Axor Feria Hotel（已预订）｜Calle de Campezo 4, 28022 Madrid, Spain",
-      "status": "Axor Feria 凌晨机场接送：待确认班车时间、预约方式和航站楼；必要时预约出租车。"
+      "status": "普拉多博物馆门票：建议提前预约 12:00 入场，尚未提供已购票信息。；机场酒店凌晨接送：确认具体发车时刻、上车点、预约要求与出发航站楼。"
     },
     {
       "date": "02/16",
@@ -712,5 +850,6 @@ const trip = {
       "stay": "飞机上／无酒店住宿",
       "status": "凌晨机场接送：前一日落实，未确认前不要按班车已安排处理。"
     }
-  ]
+  ],
+  "madrid_update_source": "2027西葡旅行完整行程_马德里新版(1).pdf，第9–11页"
 };
